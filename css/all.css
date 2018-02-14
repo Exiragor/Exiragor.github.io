@@ -3,8 +3,8 @@ body {
 }
 
 .container {
-  display: inline-block;
-  backgorund-color: white;
+  max-width: 500px;
+  background-color: white;
   padding: 30px;
   margin: 100px auto;
 }
