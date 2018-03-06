@@ -9,3 +9,7 @@ body {
   padding: 30px;
   margin: 100px auto;
 }
+
+ul {
+  text-align: left;
+}
