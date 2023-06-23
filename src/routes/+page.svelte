@@ -4,24 +4,33 @@
 </script>
 
 <main>
-    <div class="block">
-        <Personal />
-    </div>
+    <section>
+        <div class="block">
+            <Personal />
+        </div>
 
-    <div class="block">
-        <Links />
-    </div>
+        <div class="block">
+            <Links />
+        </div>
+    </section>
 </main>
 
 <style>
     main {
-        height: 100vh;
         display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-image: url("/bg/1.jpg");
+        color: white;
+    }
+
+    section {
+        height: 100%;
+        display: flex;
+        flex: 1 1 auto;
         flex-direction: column;
         justify-content: end;
         align-items: center;
-        background-image: url("/bg/1.jpg");
-        color: white;
         padding: 50px;
     }
 
