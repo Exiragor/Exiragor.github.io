@@ -17,9 +17,9 @@
 
 <style>
     main {
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
         background-image: url("/bg/1.jpg");
         color: white;
     }
@@ -45,6 +45,16 @@
 
     .block + .block {
         margin-top: 10px;
+    }
+
+    @media screen and (max-width: 64em) {
+        section {
+           padding: 0;
+        }
+
+        .block {
+            width: 100%;
+        }
     }
 </style>
 

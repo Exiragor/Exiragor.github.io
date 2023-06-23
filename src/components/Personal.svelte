@@ -19,4 +19,11 @@
     .position {
         margin: 0;
     }
+
+    @media screen and (max-width: 64em) {
+        .avatar {
+            width: 150px;
+            height: 150px;
+        }
+    }
 </style>

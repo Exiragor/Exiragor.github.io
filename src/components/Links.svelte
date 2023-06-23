@@ -32,4 +32,15 @@
     svg {
         fill: white;
     }
+
+    @media screen and (max-width: 64em) {
+        .avatar {
+            width: 150px;
+            height: 150px;
+        }
+
+        .link + .link {
+            margin-left: 50px;
+        }
+    }
 </style>
