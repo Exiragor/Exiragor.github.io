@@ -1,14 +1,15 @@
+<script>
+    import Personal from '../components/Personal.svelte'
+    import Links from '../components/Links.svelte'
+</script>
+
 <main>
     <div class="block">
-        <div class="avatar"></div>
-        <h1 class="name">Lebedev Aleksander</h1>
-        <h2 class="position">@frontend developer</h2>
+        <Personal />
     </div>
 
     <div class="block">
-        <div class="links">
-            <a href="t.me/exiragor" class="link"><img src="icons/telegram.svg" alt="t.me/exiragor"></a>
-        </div>
+        <Links />
     </div>
 </main>
 
@@ -24,14 +25,6 @@
         padding: 50px;
     }
 
-    .name {
-        margin-bottom: 10px;
-    }
-
-    .position {
-        margin: 0;
-    }
-
     .block {
         width: 50%;
         display: flex;
@@ -42,34 +35,7 @@
     }
 
     .block + .block {
-        margin-top: 15px;
-    }
-
-    .avatar {
-        width: 200px;
-        height: 200px;
-        border-radius: 200px;
-        background-image: url("/avatar.heic");
-        background-position: 52% 45%;
-        background-size: unset;
-    }
-
-    .links {
-        display: flex;
-    }
-
-    .link {
-        width: 50px;
-        height: 50px;
-    }
-
-    .link img {
-        width: inherit;
-        height: inherit;
-    }
-
-    svg {
-        fill: white;
+        margin-top: 10px;
     }
 </style>
 
