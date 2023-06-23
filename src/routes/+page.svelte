@@ -48,10 +48,6 @@
     }
 
     @media screen and (max-width: 64em) {
-        section {
-           padding: 0;
-        }
-
         .block {
             width: 100%;
         }
