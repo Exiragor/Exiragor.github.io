@@ -5,7 +5,7 @@
 
 <main>
     <section>
-        <div class="block">
+        <div class="block personal-block">
             <Personal />
         </div>
 
@@ -35,16 +35,21 @@
     }
 
     .block {
-        width: 50%;
+        width: 35%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.58);
+        background-color: rgba(0, 0, 0, 0.65);
         padding: 25px;
     }
 
     .block + .block {
-        margin-top: 10px;
+        margin-top: 20px;
+    }
+
+    .personal-block {
+        padding-top: 75px;
+        padding-bottom: 75px;
     }
 
     @media screen and (max-width: 64em) {
