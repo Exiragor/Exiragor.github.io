@@ -1,6 +1,12 @@
 <script>
 	import '../app.postcss';
-    import { Navbar, NavLi, NavUl, NavHamburger } from 'flowbite-svelte'
+    import { Navbar, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
+    import { page } from '$app/stores';
+
+    export const routes = [
+        { link: '/', label: 'Home'},
+        { link: '/skills', label: 'Skills'},
+    ];
 </script>
 
 <div class="bg-gray-900 min-h-screen">
@@ -9,8 +15,13 @@
             <div></div>
             <NavHamburger on:click={toggle} />
             <NavUl {hidden}>
-                <NavLi href="/" active={true}>Home</NavLi>
-                <NavLi href="/skills">Skills</NavLi>
+                {#each routes as route}
+                    <NavLi href={route.link}
+                           active={$page.url.pathname === route.link}
+                    >
+                        {route.label}
+                    </NavLi>
+                {/each}
             </NavUl>
         </Navbar>
     </header>
