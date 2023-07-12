@@ -6,7 +6,7 @@
 </script>
 
 <div class="flex-1 flex justify-center items-center">
-    <Card class="flex flex-col items-center max-w-lg w-full p-6 px-12">
+    <Card class="flex flex-col items-center max-w-lg w-full p-4 lg:p-6 px-6 mx-6">
         <Personal />
         <Links />
     </Card>
