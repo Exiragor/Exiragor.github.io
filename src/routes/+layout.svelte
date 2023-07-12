@@ -6,6 +6,7 @@
     export const routes = [
         { link: '/', label: 'Home'},
         { link: '/skills', label: 'Skills'},
+        { link: '/experience', label: 'Experience'},
     ];
 </script>
 
