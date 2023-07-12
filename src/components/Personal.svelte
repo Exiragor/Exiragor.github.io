@@ -1,6 +1,11 @@
-<div class="relative inline-flex items-center justify-center w-40 h-40 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
-    <span class="font-medium text-gray-300">AL</span>
-</div>
+<script>
+    import { Avatar } from "flowbite-svelte"
+</script>
 
-<h1 class="text-3xl font-extrabold text-white pt-6">Lebedev Aleksandr</h1>
-<h2 class="text-2xl text-gray-500">@Frontend developer</h2>
+<div class="flex items-center space-x-4 mb-10">
+    <Avatar src="/avatar.heic" size="xl"/>
+    <div class="space-y-1 font-medium dark:text-white">
+        <h1 class="text-3xl font-extrabold">Lebedev Aleksandr</h1>
+        <h2 class="text-2xl text-gray-500 dark:text-gray-400">@Frontend developer</h2>
+    </div>
+</div>

@@ -8,5 +8,6 @@
 <div class="flex-1 flex justify-center items-center">
     <Card class="flex flex-col items-center max-w-lg w-full p-6 px-12">
         <Personal />
+        <Links />
     </Card>
 </div>
