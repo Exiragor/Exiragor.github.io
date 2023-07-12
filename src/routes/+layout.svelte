@@ -9,9 +9,13 @@
     ];
 </script>
 
-<div class="bg-gray-900 min-h-screen">
-    <header class="mb-40">
-        <Navbar let:hidden let:toggle class="dark:bg-gray-800">
+<div class="min-h-screen flex flex-col flex-wrap">
+    <header class="sticky top-0 shadow-md">
+        <Navbar
+                class="dark:bg-gray-800"
+                let:hidden
+                let:toggle
+        >
             <div></div>
             <NavHamburger on:click={toggle} />
             <NavUl {hidden}>
