@@ -1,26 +1,13 @@
 <script>
-    import {MouseIcon, Personal, Links, About} from '../components';
+    import {Home, About} from '../components';
     import {Progressbar} from "flowbite-svelte";
 </script>
 
 <div class="min-h-screen flex flex-col flex-wrap">
-    <section id="home" class="relative bg-[url('/bg.jpeg')] flex-1 flex justify-center items-center bg-cover bg-center">
-        <div class="absolute top-0 left-0 bg-opacity-60 bg-black w-full h-full z-10"></div>
-        <div class="flex flex-col items-center p-4 lg:p-6 px-6 mx-6 z-20">
-            <Personal/>
-            <Links/>
-            <MouseIcon href="#about" />
-        </div>
-    </section>
+    <Home />
 </div>
 
-<section id="about" class="bg-neutral-800 px-4 py-16 md:py-24 lg:px-8">
-    <div class="mx-auto max-w-screen-lg">
-        <div class="grid grid-cols-1 gap-y-4 md:grid-cols-4">
-            <About />
-        </div>
-    </div>
-</section>
+<About />
 
 <section id="resume" class="bg-neutral-100 px-4 py-16 md:py-24 lg:px-8">
     <div class="mx-auto max-w-screen-lg">

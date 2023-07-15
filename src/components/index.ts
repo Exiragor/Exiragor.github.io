@@ -1,4 +1,5 @@
-export { default as About } from './sections/About.svelte';
+export * from './info';
+export * from './sections';
 export { default as Company } from './Company.svelte';
 export { default as Links } from './Links.svelte';
 export { default as MouseIcon } from './MouseIcon.svelte';
