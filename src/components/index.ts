@@ -5,3 +5,4 @@ export { default as Links } from './Links.svelte';
 export { default as MouseIcon } from './MouseIcon.svelte';
 export { default as Personal } from './Personal.svelte';
 export { default as Skills } from './Skills.svelte';
+export { default as ResumeBlock } from './ResumeBlock.svelte';

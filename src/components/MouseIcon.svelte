@@ -3,40 +3,19 @@
 </script>
 
 <a href={href}>
-    <div class="mouse-icon">
-        <div class="scroll bg-orange-500"></div>
+    <div class="absolute left-0 right-0 border-2 border-white rounded-3xl w-8 h-14 z-10 mx-auto my-24">
+        <div class="scroll relative rounded-2xl h-2.5 mx-auto bg-orange-500 top-2 w-1"></div>
     </div>
 </a>
 
 <style>
-    .mouse-icon {
-        border: 2px solid #fff;
-        border-radius: 16px;
-        display: block;
-        height: 50px;
-        margin: 100px auto;
-        position: absolute;
-        left: 0;
-        right: 0;
-        width: 30px;
-        z-index: 10;
-    }
-    .mouse-icon .scroll {
+    .scroll {
         animation-delay: 0s;
         animation-duration: 1s;
         animation-iteration-count: infinite;
         animation-name: scrolling;
         animation-play-state: running;
         animation-timing-function: linear;
-    }
-    .mouse-icon .scroll {
-        border-radius: 10px;
-        height: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
-        top: 4px;
-        width: 4px;
     }
 
     @keyframes scrolling {

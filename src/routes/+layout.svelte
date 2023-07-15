@@ -4,15 +4,15 @@
     import { page } from '$app/stores';
 
     export const routes = [
-        { link: '/#home', label: 'Home'},
-        { link: '/#about', label: 'About'},
-        { link: '/#resume', label: 'Resume'},
+        { link: '#home', label: 'Home'},
+        { link: '#about', label: 'About'},
+        { link: '#resume', label: 'Resume'},
     ];
 </script>
 
-<header class="dark fixed top-0 z-50 w-full bg-neutral-900/50 backdrop-blur sm:block">
+<header class="fixed top-0 z-50 w-full bg-neutral-900/50 backdrop-blur sm:block">
     <Navbar
-            class="dark:bg-transparent p-2 md:p-0"
+            class="bg-transparent p-2 md:p-0"
             let:hidden
             let:toggle
     >
@@ -21,8 +21,9 @@
         <NavUl {hidden} class="mx-auto">
             {#each routes as route}
                 <NavLi href={route.link}
-                       active={$page.url.pathname === route.link}
-                       class="text-neutral-100"
+                       active={$page.url.hash === route.link}
+                       class="text-white dark:hover:text-orange-500"
+                       activeClass="test text-orange-500"
                 >
                     {route.label}
                 </NavLi>

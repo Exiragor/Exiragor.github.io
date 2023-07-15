@@ -1,16 +1,20 @@
 <script>
-    import { Avatar } from "flowbite-svelte"
-
     export let name = 'Company name';
-    export let position = '@Frontend developer'
+    export let position = 'Frontend developer'
 
-    export let img = '';
+    export let timeLine = '';
 </script>
 
-<div class="flex items-center space-x-4 mb-6">
-    <Avatar src={img} size="lg" rounded />
-    <div class="space-y-1 font-medium dark:text-white">
-        <h1 class="text-xl lg:text-2xl font-extrabold">{name}</h1>
-        <h2 class="text-sm lg:text-xl text-gray-500 dark:text-gray-400">{position}</h2>
+<div class="flex flex-col pb-8 text-center last:pb-0 md:text-left">
+    <div class="flex flex-col pb-4">
+        <h2 class="text-xl font-bold">{position}</h2>
+        <div class="flex items-center justify-center gap-x-2 md:justify-start">
+            <span class="flex-1 text-sm font-medium italic sm:flex-none">
+                {name}
+            </span>
+            <span>•</span>
+            <span class="flex-1 text-sm sm:flex-none">{timeLine}</span>
+        </div>
     </div>
+    <p><slot /></p>
 </div>
