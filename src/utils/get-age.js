@@ -1,13 +1,11 @@
 const today = new Date();
 
-export function getAge(birthdate) {
-    const year_difference = today.getFullYear() - birthdate.getFullYear();
-    const one_or_zero =
-        today.getMonth() < birthdate.getMonth() ||
-        (today.getMonth() === birthdate.getMonth() &&
-            today.getDate() < birthdate.getDate())
-            ? 1
-            : 0;
+export function getAge(birthDate) {
+    if (birthDate <= 0) {
+        throw new Error('Pass correct date to getAge function');
+    }
 
-    return year_difference - one_or_zero;
+    const diff = new Date(today - birthDate);
+
+    return Math.abs(diff.getUTCFullYear() - 1970);
 }
