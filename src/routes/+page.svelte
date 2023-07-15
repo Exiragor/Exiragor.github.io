@@ -1,8 +1,6 @@
 <script>
-    import Personal from '../components/Personal.svelte'
-    import Links from '../components/Links.svelte'
-    import About from '../components/About.svelte'
-    import {Avatar, Progressbar} from "flowbite-svelte";
+    import {MouseIcon, Personal, Links, About} from '../components';
+    import {Progressbar} from "flowbite-svelte";
 </script>
 
 <div class="min-h-screen flex flex-col flex-wrap">
@@ -11,6 +9,7 @@
         <div class="flex flex-col items-center p-4 lg:p-6 px-6 mx-6 z-20">
             <Personal/>
             <Links/>
+            <MouseIcon href="#about" />
         </div>
     </section>
 </div>
