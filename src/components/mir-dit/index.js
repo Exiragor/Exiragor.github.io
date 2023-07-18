@@ -1,0 +1,1 @@
+export { default as MirDitExp } from './MirDitExp.svelte';
