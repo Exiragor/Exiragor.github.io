@@ -30,15 +30,16 @@
                     market for goods. Our solution will connect investors, financial services professionals and
                     commercial users of metals and other commodities.
                     Development also takes place together with the American team.
-                    <br>
-                    Tech stack: Angular 12, ts, rxjs, grpc, material, scss, npm, git.
+                    <br><br>
+                    <span class="italic">Tech stack</span>: Angular 12, ts, rxjs, grpc, material, scss, npm, git.
+
                     <h3 class="text-base font-bold mb-4 mt-7">
                         Project FSSP(OTR), participation from Mir-dit.
                     </h3>
                     Closed project. A single personal account for federal bailiff services. He was engaged in the
                     development of the interface and the main components of the application.
-                    <br>
-                    Tech stack: Angular 9, typescript, rxjs, graphql, ng-zorro-antd, node.js, less.
+                    <br><br>
+                    <span class="italic">Tech stack</span>: Angular 9, typescript, rxjs, graphql, ng-zorro-antd, node.js, less.
 
                     <h3 class="text-base font-bold mb-4 mt-7">
                         ETD(OTR) project, participation from Mir-dit.
@@ -57,24 +58,26 @@
                     an automatic system of bidding by suppliers for a specific order, viewing the register of all
                     procurement. The entire legal component of the procurement process also takes place online with
                     using ES (electronic signature).
-                    <br>
-                    Tech stack: Vue, Vuex, Nodejs, js, scss, webpack, npm, git, docker, codeceptjs, selenium, webdriver.
+                    <br><br>
+                    <span class="italic">Tech stack</span>: Vue, Vuex, Nodejs, js, scss, webpack, npm, git, docker, codeceptjs, selenium, webdriver.
                 </Company>
                 <Company name="Future group"
                          position="Full-stack developer"
                          timeLine="June 2016 - May 2018"
                 >
                     Development and support of sites in a web studio.
-                    <br>
-                    Tech stack: Js, Bitrix, Laravel, Vue.js, react, css.
+                    <br><br>
+                    <span class="italic">Tech stack</span>: Js, Bitrix, Laravel, Vue.js, react, css.
                 </Company>
             </ResumeBlock>
+
             <ResumeBlock name="Skills">
                 <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
                     <div class="flex flex-col">
                         <span class="text-center text-lg font-bold">Hard skills</span>
                         <div class="flex flex-col gap-y-2">
-                            <div class="flex flex-col"><span class="ml-2 text-sm font-medium">Angular</span>
+                            <div class="flex flex-col">
+                                <span class="ml-2 text-sm font-medium">Angular</span>
                                 <Progressbar class="bg-neutral-300" progress="100" size="h-5"
                                              labelInsideClass="bg-orange-400"/>
                             </div>
@@ -87,7 +90,7 @@
                                              labelInsideClass="bg-orange-400"/>
                             </div>
                             <div class="flex flex-col"><span class="ml-2 text-sm font-medium">CSS</span>
-                                <Progressbar class="bg-neutral-300" progress="60" size="h-5"
+                                <Progressbar class="bg-neutral-300" progress="75" size="h-5"
                                              labelInsideClass="bg-orange-400"/>
                             </div>
                             <div class="flex flex-col"><span class="ml-2 text-sm font-medium">Node.js</span>
@@ -102,7 +105,7 @@
                                 <Progressbar class="bg-neutral-300" progress="40" size="h-5"
                                              labelInsideClass="bg-orange-400"/>
                             </div>
-                            <div class="flex flex-col"><span class="ml-2 text-sm font-medium">Gitlab CI</span>
+                            <div class="flex flex-col"><span class="ml-2 text-sm font-medium">Gitlab CI/CD</span>
                                 <Progressbar class="bg-neutral-300" progress="60" size="h-5"
                                              labelInsideClass="bg-orange-400"/>
                             </div>
