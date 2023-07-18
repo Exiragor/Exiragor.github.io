@@ -8,11 +8,14 @@
             alt: 'https://github.com/Exiragor'
         },
     ];
+
+    export let linkStyle = 'w-10 md:w-14';
+    export let blockWidth = '3/4';
 </script>
 
-<div class="flex justify-between w-3/4">
+<div class="flex justify-between w-{blockWidth}">
     {#each links as link}
-        <a href={link.href} target="_blank" class="w-10 md:w-14">
+        <a href={link.href} target="_blank" class={linkStyle}>
             <img src={link.src} alt={link.alt}>
         </a>
     {/each}
