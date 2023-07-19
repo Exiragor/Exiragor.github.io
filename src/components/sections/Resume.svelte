@@ -39,7 +39,7 @@
             </ResumeBlock>
 
             <ResumeBlock name="Skills">
-                <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div id="skills" class="grid grid-cols-1 gap-6 md:grid-cols-2">
                     <Skills name="Hard skills" items={hardSkills}/>
                     <Skills name="Soft skills" items={softSkills}/>
                 </div>

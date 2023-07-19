@@ -28,7 +28,7 @@
     })
 </script>
 
-<div id="skills" class="flex flex-col">
+<div class="flex flex-col">
     <span class="text-center text-lg font-bold">{name}</span>
     <div class="flex flex-col gap-y-2">
         {#each items as item}
