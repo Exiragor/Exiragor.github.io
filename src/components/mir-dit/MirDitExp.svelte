@@ -1,4 +1,4 @@
-<div class="ml-5">
+<div class="md:ml-5">
     <h3 class="text-base font-bold mb-4">
         Project Atomyze(New technologies), participation from Mir-dit.
     </h3>
