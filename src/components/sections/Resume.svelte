@@ -25,7 +25,7 @@
                          position="Frontend developer"
                          timeLine="May 2018 - February 2022"
                 >
-                    <MirDitExp />
+                    <MirDitExp/>
                 </Company>
 
                 <Company name="Future group"
@@ -40,8 +40,8 @@
 
             <ResumeBlock name="Skills">
                 <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-                    <Skills name="Hard skills" items={hardSkills} />
-                    <Skills name="Soft skills" items={softSkills} />
+                    <Skills name="Hard skills" items={hardSkills}/>
+                    <Skills name="Soft skills" items={softSkills}/>
                 </div>
             </ResumeBlock>
         </div>

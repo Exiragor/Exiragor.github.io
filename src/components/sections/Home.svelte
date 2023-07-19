@@ -7,6 +7,6 @@
     <div class="flex flex-col items-center p-4 lg:p-6 px-6 mx-6 z-20">
         <Personal/>
         <Links/>
-        <MouseIcon href="#about" />
+        <MouseIcon href="#about"/>
     </div>
 </section>
