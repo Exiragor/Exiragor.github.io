@@ -1,14 +1,42 @@
 <script>
 	import '../app.postcss';
 	import { Navbar, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
+	import { onMount } from 'svelte';
 	import { Footer } from '../components';
-	import { page } from '$app/stores';
+	import { useWatcher } from '../watcher';
 
-	export const routes = [
+	const routes = [
 		{ link: '#home', label: 'Home' },
 		{ link: '#about', label: 'About' },
-		{ link: '#resume', label: 'Resume' }
+		{ link: '#resume', label: 'Resume' },
+		{ link: '#skills', label: 'Skills' }
 	];
+
+	let activeLink = '';
+
+	onMount(() => {
+		const changeLink = (link) => {
+			activeLink = link;
+			history.replaceState({}, '', activeLink);
+		};
+
+		useWatcher(
+			routes.map((r) => r.link),
+			(entries) => {
+				const intersection = entries.find((x) => x.isIntersecting);
+				const skillsLeave = entries.find((x) => !x.isIntersecting && x.target.id === 'skills');
+
+				if (intersection) {
+					changeLink(`#${intersection.target.id}`);
+				}
+
+				// handle skills leave, cuz skills block is in resume block, and resume doesn't trigger intersect
+				if (skillsLeave) {
+					changeLink('#resume');
+				}
+			}
+		);
+	});
 </script>
 
 <header class="dark fixed top-0 z-50 w-full bg-neutral-900/50 backdrop-blur sm:block">
@@ -23,7 +51,7 @@
 				<NavLi
 					href={route.link}
 					class="font-bold"
-					active={$page.url.hash === route.link}
+					active={activeLink === route.link}
 					activeClass="dark:text-orange-500"
 					nonActiveClass="dark:text-neutral-100 dark:hover:text-orange-500"
 				>
