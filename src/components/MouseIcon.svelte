@@ -1,15 +1,8 @@
 <script>
 	export let href = '';
-
-	function scrollToAbout() {
-		const el = document.querySelector('#about');
-		if (!el) return;
-
-		el.scrollIntoView({ behavior: 'smooth' });
-	}
 </script>
 
-<a {href} on:click|preventDefault={scrollToAbout}>
+<a {href}>
 	<div
 		class="absolute left-0 right-0 border-2 border-white rounded-3xl w-8 h-14 z-10 mx-auto my-24"
 	>

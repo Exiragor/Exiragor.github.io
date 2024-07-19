@@ -26,13 +26,13 @@
 				const intersection = entries.find((x) => x.isIntersecting);
 				const skillsLeave = entries.find((x) => !x.isIntersecting && x.target.id === 'skills');
 
-				if (intersection) {
-					changeLink(`#${intersection.target.id}`);
+				// handle skills leave, cuz skills block is in resume block, and resume doesn't trigger intersect
+				if (skillsLeave && !intersection) {
+					changeLink('#resume');
 				}
 
-				// handle skills leave, cuz skills block is in resume block, and resume doesn't trigger intersect
-				if (skillsLeave) {
-					changeLink('#resume');
+				if (intersection) {
+					changeLink(`#${intersection.target.id}`);
 				}
 			}
 		);
