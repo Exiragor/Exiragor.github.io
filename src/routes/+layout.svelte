@@ -6,10 +6,10 @@
 	import { useWatcher } from '../watcher';
 
 	const routes = [
-		{ link: '#home', label: 'Home' },
-		{ link: '#about', label: 'About' },
-		{ link: '#resume', label: 'Resume' },
-		{ link: '#skills', label: 'Skills' }
+		{ id: 'home', label: 'Home' },
+		{ id: 'about', label: 'About' },
+		{ id: 'resume', label: 'Resume' },
+		{ id: 'skills', label: 'Skills' }
 	];
 
 	let activeLink = '';
@@ -17,22 +17,22 @@
 	onMount(() => {
 		const changeLink = (link) => {
 			activeLink = link;
-			history.replaceState({}, '', activeLink);
+			history.replaceState({}, '', `#${activeLink}`);
 		};
 
 		useWatcher(
-			routes.map((r) => r.link),
+			routes.map((r) => `#${r.id}`),
 			(entries) => {
 				const intersection = entries.find((x) => x.isIntersecting);
 				const skillsLeave = entries.find((x) => !x.isIntersecting && x.target.id === 'skills');
 
 				// handle skills leave, cuz skills block is in resume block, and resume doesn't trigger intersect
 				if (skillsLeave && !intersection) {
-					changeLink('#resume');
+					changeLink('resume');
 				}
 
 				if (intersection) {
-					changeLink(`#${intersection.target.id}`);
+					changeLink(intersection.target.id);
 				}
 			}
 		);
@@ -49,9 +49,9 @@
 		<NavUl {hidden} class="mx-auto dark:text-white">
 			{#each routes as route}
 				<NavLi
-					href={route.link}
+					href={'#' + route.id}
 					class="font-bold"
-					active={activeLink === route.link}
+					active={activeLink === route.id}
 					activeClass="dark:text-orange-500"
 					nonActiveClass="dark:text-neutral-100 dark:hover:text-orange-500"
 				>
