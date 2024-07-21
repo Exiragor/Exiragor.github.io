@@ -1,8 +1,7 @@
 <script>
 	import { ResumeBlock, Company, Skills, MirDitExp } from '../';
 	import { hardSkills, softSkills } from '../../consts';
-	import TimeLine from '../timeline/TimeLine.svelte';
-	import TimeLineItem from '../timeline/TimeLineItem.svelte';
+	import { TimeLine, TimeLineItem } from '../timeline/';
 </script>
 
 <section id="resume" class="bg-neutral-100 px-4 py-16 md:py-24 lg:px-8">
