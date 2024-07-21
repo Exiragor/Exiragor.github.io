@@ -28,7 +28,7 @@
 				},
 				{ active: '', weight: 0 }
 			);
-			console.log(intersectSet, active);
+
 			activeLink = active;
 			history.replaceState({}, '', `#${activeLink}`);
 		};
