@@ -6,34 +6,45 @@
 	import { useWatcher } from '../watcher';
 
 	const routes = [
-		{ id: 'home', label: 'Home' },
-		{ id: 'about', label: 'About' },
-		{ id: 'resume', label: 'Resume' },
-		{ id: 'skills', label: 'Skills' }
+		{ id: 'home', label: 'Home', intersectWeight: 1 },
+		{ id: 'about', label: 'About', intersectWeight: 2 },
+		{ id: 'resume', label: 'Resume', intersectWeight: 1 },
+		{ id: 'skills', label: 'Skills', intersectWeight: 2 }
 	];
 
 	let activeLink = '';
 
 	onMount(() => {
-		const changeLink = (link) => {
-			activeLink = link;
+		const intersectSet = new Set();
+
+		const changeLink = () => {
+			const { active } = Array.from(intersectSet).reduce(
+				(acc, id) => {
+					const weight = routes.find((x) => x.id === id)?.intersectWeight ?? 0;
+					if (weight > acc.weight) {
+						return { active: id, weight };
+					}
+					return acc;
+				},
+				{ active: '', weight: 0 }
+			);
+			console.log(intersectSet, active);
+			activeLink = active;
 			history.replaceState({}, '', `#${activeLink}`);
 		};
 
 		useWatcher(
 			routes.map((r) => `#${r.id}`),
 			(entries) => {
-				const intersection = entries.find((x) => x.isIntersecting);
-				const skillsLeave = entries.find((x) => !x.isIntersecting && x.target.id === 'skills');
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						intersectSet.add(entry.target.id);
+					} else {
+						intersectSet.delete(entry.target.id);
+					}
 
-				// handle skills leave, cuz skills block is in resume block, and resume doesn't trigger intersect
-				if (skillsLeave && !intersection) {
-					changeLink('resume');
-				}
-
-				if (intersection) {
-					changeLink(intersection.target.id);
-				}
+					changeLink();
+				});
 			}
 		);
 	});
